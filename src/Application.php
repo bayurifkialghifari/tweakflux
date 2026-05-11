@@ -20,10 +20,10 @@ final class Application extends SymfonyApplication
 
         parent::__construct('TweakFlux', $version);
 
-        $this->add(new ListCommand());
-        $this->add(new ApplyCommand());
-        $this->add(new CreateCommand());
-        $this->add(new BoostCommand());
-        $this->add(new UpdateCommand());
+        $this->addCommand(new ListCommand());
+        $this->addCommand(new ApplyCommand());
+        $this->addCommand(new CreateCommand());
+        $this->addCommand(new BoostCommand());
+        $this->addCommand(new UpdateCommand());
     }
 }
